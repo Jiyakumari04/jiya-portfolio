@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jiya Kumari — Developer & Security Enthusiast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- floating particle canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="nav-inner">
+        <span class="nav-logo">Jiya Kumari</span>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certs">Certs</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certs</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg">
+        <div class="grid-lines"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-tag">
+            <span class="tag-dot"></span>
+            Available for opportunities
+          </div>
+
+          <h1 class="hero-name">
+            <span class="name-jiya">Jiya</span>
+            <span class="name-kumari">Kumari</span>
+            <span class="name-underline"></span>
+          </h1>
+
+          <p class="hero-role" id="heroRole"><span class="cursor"></span></p>
+
+          <p class="hero-bio">
+            Building secure, scalable web apps with Java &amp; Spring. Currently
+            pursuing B.Tech CSE at Uttaranchal University — obsessed with clean
+            code and real-world security.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+
+          <div class="hero-social">
+            <a
+              href="https://www.linkedin.com/in/jiya-kumari-935084294/"
+              target="_blank"
+              class="social-link"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="https://leetcode.com/u/Jiya_Kumari04/"
+              target="_blank"
+              class="social-link"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"
+                />
+              </svg>
+              LeetCode
+            </a>
+            <a href="mailto:verma.jiya2004jiya@gmail.com" class="social-link">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Email
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- orbit rings -->
+          <div class="orbit-ring orbit-ring-1">
+            <div class="orbit-dot orbit-dot-1"></div>
+            <div class="orbit-dot orbit-dot-2"></div>
+          </div>
+          <div class="orbit-ring orbit-ring-2"></div>
+
+          <div class="photo-frame">
+            <!-- animated border trace -->
+            <div class="photo-trace">
+              <svg
+                viewBox="0 0 310 370"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+              >
+                <defs>
+                  <linearGradient
+                    id="traceGrad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#7c5cfc" />
+                    <stop offset="50%" stop-color="#f040a0" />
+                    <stop offset="100%" stop-color="#00e5bc" />
+                  </linearGradient>
+                </defs>
+                <rect
+                  class="trace-path"
+                  x="2"
+                  y="2"
+                  width="306"
+                  height="366"
+                  rx="17"
+                />
+              </svg>
+            </div>
+
+            <div class="photo-placeholder" id="photoArea">
+              <img src="JIYA_KUMARI.jpeg" alt="Jiya Kumari" />
+            </div>
+            <div class="photo-corner tl"></div>
+            <div class="photo-corner tr"></div>
+            <div class="photo-corner bl"></div>
+            <div class="photo-corner br"></div>
+          </div>
+
+          <div class="floating-badge badge-1">
+            <span class="badge-icon">🔐</span><span>Cybersecurity</span>
+          </div>
+          <div class="floating-badge badge-2">
+            <span class="badge-icon">☕</span><span>Java Spring</span>
+          </div>
+          <div class="floating-badge badge-3">
+            <span class="badge-icon">⚛️</span><span>React.js</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="blob-deco"></div>
+      <div class="container">
+        <div class="section-label reveal">01 — About</div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <h2 class="section-heading">
+              A developer who<br /><em>thinks like a hacker</em>
+            </h2>
+            <p>
+              I'm Jiya, a Computer Science Engineering student at Uttaranchal
+              University, Dehradun. My work lives at the crossroads of
+              full-stack development and cybersecurity — I build things, then
+              try to break them.
+            </p>
+            <p>
+              With Java, Spring, and React as my core stack, I focus on writing
+              backend systems that are both performant and secure. I've built a
+              Vulnerability Scanner Tool, worked on threat detection, and earned
+              certifications from Google and Deloitte.
+            </p>
+            <p>
+              When I'm not writing code, I'm solving problems on LeetCode or
+              picking apart how systems can be made more resilient.
+            </p>
+            <div class="about-meta">
+              <div class="meta-item">
+                <span class="meta-label">Location</span
+                ><span class="meta-value">Dehradun, Uttarakhand</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Degree</span
+                ><span class="meta-value">B.Tech CSE — 2023–2027</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Focus</span
+                ><span class="meta-value">Backend · Security · React</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Languages</span
+                ><span class="meta-value">Hindi · English · French (A1)</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-stats reveal">
+            <div class="stat-card">
+              <div class="stat-num" data-target="3" data-suffix="+">3+</div>
+              <div class="stat-desc">Projects Built</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" data-target="4" data-suffix="">4</div>
+              <div class="stat-desc">Certifications</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" data-target="2027" data-suffix="">2027</div>
+              <div class="stat-desc">Graduating Year</div>
+            </div>
+            <div class="stat-card highlight-card">
+              <div class="stat-num">∞</div>
+              <div class="stat-desc">Lines of Curiosity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-label reveal">02 — Skills</div>
+        <h2 class="section-heading reveal">Tools of<br /><em>the trade</em></h2>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <div class="skill-group-title">
+              <span class="skill-icon">{ }</span> Languages
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Python</span><span class="tag">Java</span
+              ><span class="tag">JavaScript</span
+              ><span class="tag">HTML/CSS</span><span class="tag">SQL</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <div class="skill-group-title">
+              <span class="skill-icon">⚙</span> Frameworks &amp; Libraries
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Spring Framework</span
+              ><span class="tag">React.js</span
+              ><span class="tag">Tailwind CSS</span
+              ><span class="tag">JSP Servlets</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <div class="skill-group-title">
+              <span class="skill-icon">🛠</span> Developer Tools
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Git &amp; GitHub</span
+              ><span class="tag">VS Code</span
+              ><span class="tag">IntelliJ IDEA</span
+              ><span class="tag">Postman</span
+              ><span class="tag">Apache Tomcat</span
+              ><span class="tag">AWS</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <div class="skill-group-title">
+              <span class="skill-icon">🗄</span> Databases
+            </div>
+            <div class="skill-tags">
+              <span class="tag">MySQL</span><span class="tag">MongoDB</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <div class="skill-group-title">
+              <span class="skill-icon">⚡</span> Core Areas
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag-accent">RESTful APIs</span
+              ><span class="tag tag-accent">Full-Stack Development</span
+              ><span class="tag tag-accent"
+                >Data Structures &amp; Algorithms</span
+              ><span class="tag tag-accent">Cybersecurity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-label reveal">03 — Projects</div>
+        <h2 class="section-heading reveal">
+          Things I've<br /><em>built &amp; broken</em>
+        </h2>
+        <div class="projects-list">
+          <div class="project-card reveal" data-index="01">
+            <div class="project-head">
+              <div class="project-num">01</div>
+              <div class="project-year">2026</div>
+            </div>
+            <h3 class="project-title">Vulnerability Scanner Tool</h3>
+            <p class="project-desc">
+              A full-stack security tool that scans open ports, detects
+              potential system vulnerabilities, and generates structured
+              security reports. Threat detection logic built in Java Spring with
+              a React frontend.
+            </p>
+            <div class="project-tech">
+              <span>Java</span><span>Spring Framework</span><span>React.js</span
+              ><span>JSP Servlets</span><span>MongoDB</span
+              ><span>REST API</span>
+            </div>
+            <div class="project-highlights">
+              <div class="highlight">
+                Port scanning &amp; vulnerability detection
+              </div>
+              <div class="highlight">Automated security report generation</div>
+              <div class="highlight">
+                Risk assessment using assessment frameworks
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-index="02">
+            <div class="project-head">
+              <div class="project-num">02</div>
+              <div class="project-year">2025</div>
+            </div>
+            <h3 class="project-title">Keylogger Detection System</h3>
+            <p class="project-desc">
+              A Python-based system for detecting keylogger activity. Includes a
+              full-featured blog platform module with CRUD, rich text editing,
+              search across 200+ posts, and a 40% reduction in page load time
+              through caching.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>CRUD Operations</span
+              ><span>Full-text Search</span><span>Caching</span>
+            </div>
+            <div class="project-highlights">
+              <div class="highlight">40% faster page loads via caching</div>
+              <div class="highlight">Search across 200+ blog posts</div>
+              <div class="highlight">
+                Rich text editor with markdown support
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-index="03">
+            <div class="project-head">
+              <div class="project-num">03</div>
+              <div class="project-year">2025–26</div>
+            </div>
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">
+              A responsive personal portfolio with smooth animations and
+              interactive UI elements. Designed from scratch and deployed to
+              GitHub Pages.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span
+              ><span>GitHub Pages</span>
+            </div>
+            <div class="project-highlights">
+              <div class="highlight">Fully responsive design</div>
+              <div class="highlight">Interactive JS animations</div>
+              <div class="highlight">Deployed on GitHub Pages</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certs">
+      <div class="container">
+        <div class="section-label reveal">04 — Certifications</div>
+        <h2 class="section-heading reveal">
+          What I've<br /><em>earned &amp; learned</em>
+        </h2>
+        <div class="certs-grid">
+          <div class="cert-card reveal">
+            <div class="cert-logo cert-udemy">U</div>
+            <div class="cert-info">
+              <div class="cert-title">Full Stack Web Development</div>
+              <div class="cert-issuer">Udemy</div>
+            </div>
+            <div class="cert-status done">Completed</div>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-logo cert-google">G</div>
+            <div class="cert-info">
+              <div class="cert-title">Google Cybersecurity Certificate</div>
+              <div class="cert-issuer">Coursera × Google</div>
+            </div>
+            <div class="cert-status ongoing">Ongoing</div>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-logo cert-code">C</div>
+            <div class="cert-info">
+              <div class="cert-title">Virtual Cyber Security Internship</div>
+              <div class="cert-issuer">Code Alpha</div>
+            </div>
+            <div class="cert-status done">Completed</div>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-logo cert-deloitte">D</div>
+            <div class="cert-info">
+              <div class="cert-title">Cybersecurity Job Simulation</div>
+              <div class="cert-issuer">Deloitte</div>
+            </div>
+            <div class="cert-status done">Completed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="container">
+        <div class="section-label reveal">05 — Education</div>
+        <h2 class="section-heading reveal">The<br /><em>journey so far</em></h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <div class="timeline-year">2023 — 2027</div>
+              <div class="timeline-school">Uttaranchal University</div>
+              <div class="timeline-degree">
+                B.Tech — Computer Science &amp; Engineering
+              </div>
+              <div class="timeline-place">Dehradun, Uttarakhand</div>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <div class="timeline-year">2023</div>
+              <div class="timeline-school">
+                Shanti Niketan Sr. Secondary School
+              </div>
+              <div class="timeline-degree">Intermediate — CBSE</div>
+              <div class="timeline-place">Muzaffarpur, Bihar</div>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <div class="timeline-year">2021</div>
+              <div class="timeline-school">Amatir Kanya Gurukul</div>
+              <div class="timeline-degree">High School — CBSE</div>
+              <div class="timeline-place">Kurukshetra, Haryana</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-label reveal">06 — Contact</div>
+        <div class="contact-inner">
+          <h2 class="contact-heading reveal">
+            Let's build<br />something<br /><em>together.</em>
+          </h2>
+          <div class="contact-details reveal">
+            <p class="contact-sub">
+              Open to internships, collaborations, and interesting projects.
+              Drop me a line.
+            </p>
+            <div class="contact-links">
+              <a
+                href="mailto:verma.jiya2004jiya@gmail.com"
+                class="contact-item"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                verma.jiya2004jiya@gmail.com
+              </a>
+              <a href="tel:7895163882" class="contact-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .32h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.09 6.09l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15z"
+                  />
+                </svg>
+                +91 78951 63882
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jiya-kumari-935084294/"
+                target="_blank"
+                class="contact-item"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                  />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                linkedin.com/in/jiya-kumari
+              </a>
+              <a
+                href="https://leetcode.com/u/Jiya_Kumari04/"
+                target="_blank"
+                class="contact-item"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"
+                  />
+                </svg>
+                leetcode.com/u/Jiya_Kumari04
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-inner">
+        <span class="footer-logo">Jiya Kumari</span>
+        <span class="footer-copy">© 2025 Jiya Kumari. Built with passion.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
